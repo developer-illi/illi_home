@@ -100,11 +100,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'illi_test',                      # Or path to database file if using sqlite3.
+        'NAME': 'illi',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                      # Not used with sqlite3.
-        'PASSWORD': '1235gg',                  # Not used with sqlite3.
-        'HOST': '127.0.0.1',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '5432',
+        'PASSWORD': 'illi0606',                  # Not used with sqlite3.
+        'HOST': 'svc.sel5.cloudtype.app',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '30489',
     }
 }
 
