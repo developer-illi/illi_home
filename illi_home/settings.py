@@ -90,23 +90,14 @@ WSGI_APPLICATION = 'illi_home.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-    }
-}
-'''
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'root',                      # Or path to database file if using sqlite3.
+        'NAME': 'illi',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                      # Not used with sqlite3.
         'PASSWORD': 'illi0606',                  # Not used with sqlite3.
         'HOST': 'svc.sel5.cloudtype.app',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '30489',
+        'PORT': '30669',
     }
 }
 '''
