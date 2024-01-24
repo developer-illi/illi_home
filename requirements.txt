@@ -1,0 +1,16 @@
+asgiref==3.7.2
+dj-database-url==2.1.0
+Django==4.2.4
+django-cors-headers==4.3.1
+djangorestframework==3.14.0
+numpy==1.26.3
+pillow==10.2.0
+postgres==4.0
+psycopg==3.1.17
+psycopg2==2.9.9
+psycopg2-binary==2.9.9
+psycopg2-pool==1.2
+pytz==2023.3.post1
+South==1.0.2
+sqlparse==0.4.4
+typing_extensions==4.9.0
