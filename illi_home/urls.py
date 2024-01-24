@@ -1,0 +1,37 @@
+"""illi_home URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from local import views
+from django.conf.urls import *
+from django.urls import path
+from django.conf.urls.static import static
+from illi_home import settings
+from local.views import ProductListAPI
+
+urlpatterns = [
+    path('', views.main, name='main_page'),
+    path('project/', views.project, name='project_page'),
+    path('temporary/', views.temporary, name='temporary_page'),
+    path('about/', views.about, name='about_page'),
+    path('ifp/', views.contact, name='contact_page'),
+    path('ifpterms' ,views.terms, name='terms'),
+    path('end', views.end, name='end'),
+
+    path('mails', views.mails, name='mails'),
+    #path('api/product/', ProductListAPI.as_view())
+
+]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

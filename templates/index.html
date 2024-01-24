@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/illi.js' %}"></script>
+    <title>ILLI</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="{% url 'main_page' %}"><img src="{% static 'img/mainlogo.png' %}" alt="메인로고"></a></h1>
+            <div class="header_top">
+                <button class="btn_nav mobile">
+                    <span>메뉴 열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="nav_wrap">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <div class="nav_inner">
+                        <div class="mobile">
+                            <a href="{% url 'main_page' %}">메인으로 이동</a>
+                            <a href="#" class="close">
+                                <span>서브닫기</span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <ul class="gnb">
+                            <li>
+                                <a href="#">ABOUT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'about_page' %}">ILLI</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">FLIT</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">PROJECT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'project_page' %}">ALL</a></li>
+                                            <li><a href="{% url 'project_page' %}">실내조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">실외조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">이벤트 및 행사</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">ARTWORK</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'temporary_page' %}">ARTIST</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">EXHIBITION</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <!--<li><a href="{% url 'contact_page' %}">IFP</a></li>-->
+                        </ul>
+                    </div> <!-- // nav_inner -->
+                </nav> <!-- // nav_wrap m: 서브 배경 -->
+            </div> <!-- // header_top -->
+        </header>
+        <div id="visual">
+            <div class="mainimage mobile"></div>
+            <div class="txt">
+                <h2>자연과의 공존을 그리다</h2>
+                <p>COEXISTENCE WITH<span>NATURE</span></p>
+            </div>
+        </div> <!-- // visual -->
+        <div id="main_title">
+            <h3>PROJECT<a href="{% url 'project_page' %}">프로젝트 바로가기</a></h3>
+        </div> <!-- //main_title -->
+        <section class="main_slider">
+            <div class="item">
+                <img src="{% static 'img/img01.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/img02.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/img03.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/img04.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/img05.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/img06.jpg' %}">
+                <div class="slide_txt"><span>Lorem lpsum</span></div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_inner">
+                <ul class="contact">
+                    <li><span>T</span>010 6536 0429</li>
+                    <li><span>E</span>eomji_j@naver.com</li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">instagram</a></li>
+                </ul>
+                <ul class="copy">
+                    <li>사업장 소재지 (01849) 서울특별시 노원구 동일로 174길 27 (27, Dongil-ro 174-gil, Nowon-gu, Seoul, Republic of Korea) | 대표 전엄지 | 사업자등록번호 209-27-65193</li>
+                    <li>ⓒ 2022. ILLI All rights reserved.</li>
+                </ul>
+            </div>
+        </footer>
+    </div> <!-- // wrap -->
+    
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="img/favicon_1.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/illi.js' %}"></script>
+    <title>ILLI</title>
+</head>
+<body>
+   <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="{% url 'main_page' %}"><img src="{% static 'img/mainlogo.png' %}" alt="메인로고"></a></h1>
+            <div class="header_top">
+                <button class="btn_nav mobile">
+                    <span>메뉴 열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="nav_wrap">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <div class="nav_inner">
+                        <div class="mobile">
+                            <a href="{% url 'main_page' %}">메인으로 이동</a>
+                            <a href="#" class="close">
+                                <span>서브닫기</span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <ul class="gnb">
+                            <li>
+                                <a href="#">ABOUT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'about_page' %}">ILLI</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">FLIT</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">PROJECT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'project_page' %}">ALL</a></li>
+                                            <li><a href="{% url 'project_page' %}">실내조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">실외조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">이벤트 및 행사</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">ARTWORK</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'temporary_page' %}">ARTIST</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">EXHIBITION</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <!--<li><a href="{% url 'contact_page' %}">IFP</a></li>-->
+                        </ul>
+                    </div> <!-- // nav_inner -->
+                </nav> <!-- // nav_wrap m: 서브 배경 -->
+            </div> <!-- // header_top -->
+        </header> 
+        <div id="about_contents">
+            <div class="side"></div>
+            <main>
+                <section id="intro">
+                    <div class="intro_inner">
+                        <div class="title">INTRODUCE</div>
+                        <div class="content">
+                            <h2>일리있는 가치를 만듭니다.</h2>
+                            <p>
+                            일리는 자연과의 공존을 그리는 인테리어 디자인 기반 조경 전문 기업입니다. 고객이 추구하는 인테리어에 자연을 더해 분석 및 디자인하여 이를 실현시킵니다.
+                            </p>
+                        </div>
+                    </div> <!-- // intro_inner -->
+                </section> <!-- // intro -->
+                <section id="pro">
+                    <div class="pro_inner">
+                        <div class="title">PROCEDURE</div>
+                        <ul>
+                            <li>
+                                <h2>01</h2>
+                                <h3>CONSULTING</h3>
+                                <p>플랜테리어와의 상담을 통해 고객의 요구사항 및 작업을 파악합니다</p>
+                            </li>
+                            <li>
+                                <h2>02</h2>
+                                <h3>PLANNING</h3>
+                                <p>최적화된 기획 및 디자인을 통해 작업을 제안합니다</p>
+                            </li>
+                            <li>
+                                <h2>03</h2>
+                                <h3>ESTIMATE</h3>
+                                <p>가치공학을 통한 견적을 산출하여 고객의 조건 및 최고의 결과를 위한 견적을 제시합니다</p>
+                            </li>
+                            <li>
+                                <h2>04</h2>
+                                <h3>CONSTRUCTION</h3>
+                                <p>뛰어난 기술력을 지는 전문가들로 구성된 팀이 직접 작업하여 고객이 만족하는 조경 및 관리 서비스를 제공합니다</p>
+                            </li>
+                        </ul>
+                    </div> <!-- // pro_inner -->
+                </section> <!-- // pro -->
+                <section id="history">
+                    <div class="history_inner">
+                        <div class="title">HISTORY</div>
+                        <ul class="timeline">
+                            <li>
+                                <h2>Lorem lpsum</h2>
+                                <ul>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Lorem lpsum</h2>
+                                <ul>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Lorem lpsum</h2>
+                                <ul>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                    <li>Lorem lpsum</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="p_content">
+                            <li>
+                                <div class="slide_txt"><span>Lorem lpsum</span></div>
+                            </li>
+                            <li>
+                                <div class="slide_txt"><span>Lorem lpsum</span></div>
+                            </li>
+                            <li>
+                                <div class="slide_txt"><span>Lorem lpsum</span></div>
+                            </li>
+                            <li>
+                                <div class="slide_txt"><span>Lorem lpsum</span></div>
+                            </li>
+                            <li>
+                                <div class="slide_txt"><span>Lorem lpsum</span></div>
+                            </li>
+                            <li>
+                                <div class="slide_txt"><span>롯데월드타워 19F</span></div>
+                            </li>
+                        </ul>
+                    </div> <!-- // history_inner -->
+                </section> <!-- // history -->
+            </main>
+        </div> <!-- // about_contents -->
+        <footer>
+            <div class="footer_inner">
+                <ul class="contact">
+                    <li><span>T</span>010 6536 0429</li>
+                    <li><span>E</span>eomji_j@naver.com</li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">instagram</a></li>
+                </ul>
+                <ul class="copy">
+                    <li>사업장 소재지 (01849) 서울특별시 노원구 동일로 174길 27 (27, Dongil-ro 174-gil, Nowon-gu, Seoul, Republic of Korea) | 대표 전엄지 | 사업자등록번호 209-27-65193</li>
+                    <li>ⓒ 2022. ILLI All rights reserved.</li>
+                </ul>
+            </div>
+        </footer>
+    </div> <!-- // about_wrap -->
+    
+    <script type="text/javascript" src="js/illi.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

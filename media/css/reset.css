@@ -1,0 +1,14 @@
+body, div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, table, tr, th, td, form, fieldset, legend, input, label, select, textarea, button, header, footer, nav, aside, section, article, main, a, span, strong, em, b, i, address {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+html {
+    font-family: 'Inter', '돋움', dotum, sans-serif;
+    font-size: 0.625em;
+    letter-spacing: 1.8px;
+}
+a { text-decoration: none; }
+ul, ol, li { list-style: none; }
+img, fieldset { border: none; vertical-align: middle; }
+strong, em, b, i, address { font-weight: normal; font-style: normal; }
+table { border-collapse: collapse; }
+button { border: none; background-color: transparent; cursor: pointer; }

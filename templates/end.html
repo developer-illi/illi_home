@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=t6di1xnx54"></script>
+        <script type="text/javascript" src="{% static 'js/illi.js' %}"></script>
+    <title>ILLI</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="{% url 'main_page' %}"><img src="{% static 'img/mainlogo.png' %}" alt="메인로고"></a></h1>
+            <div class="header_top">
+                <button class="btn_nav mobile">
+                    <span>메뉴 열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="nav_wrap">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <div class="nav_inner">
+                        <div class="mobile">
+                            <a href="{% url 'main_page' %}">메인으로 이동</a>
+                            <a href="#" class="close">
+                                <span>서브닫기</span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <ul class="gnb">
+                            <li>
+                                <a href="#">ABOUT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'about_page' %}">ILLI</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">FLIT</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">PROJECT</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'project_page' %}">ALL</a></li>
+                                            <li><a href="{% url 'project_page' %}">실내조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">실외조경</a></li>
+                                            <li><a href="{% url 'project_page' %}">이벤트 및 행사</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <li>
+                                <a href="#">ARTWORK</a>
+                                <div class="sub_wrap">
+                                    <div class="sub_inner">
+                                        <ul>
+                                            <li><a href="{% url 'temporary_page' %}">ARTIST</a></li>
+                                            <li><a href="{% url 'temporary_page' %}">EXHIBITION</a></li>
+                                        </ul>
+                                    </div> <!-- // sub_inner -->
+                                </div> <!-- // sub_wrap -->
+                            </li>
+                            <!--<li><a href="{% url 'contact_page' %}">IFP</a></li>-->
+                        </ul>
+                    </div> <!-- // nav_inner -->
+                </nav> <!-- // nav_wrap m: 서브 배경 -->
+            </div> <!-- // header_top -->
+        </header>
+        <div id="contact_contents">
+            <main>
+                <section id="git">
+                    <div class="git_inner">
+                        <div class="title">
+                            <h2>Reservation</h2>
+                            <p><h3>예약이 완료되었습니다.</h3></p>
+                        </div>
+                        <div class="content">
+
+                        </div>
+                    </div> <!-- // git_inner -->
+                </section> <!-- // git -->
+                <section id="us">
+                    <div class="us_inner">
+                        <div class="title">
+                            <h2>Contact Us</h2>
+                            <p>빠르고 신속한 문의에는 아래의 정보에 연락주시면, 24시간 이내에 답변을 드립니다.</p>
+                        </div>
+                        <div class="content">
+                            <ul class="detail">
+                                <li>
+                                    <h3>TEL</h3>
+                                    <span>010 6536 0429</span>
+                                </li>
+                                <li>
+                                    <h3>EMAIL</h3>
+                                    <span>eomji_j@naver.com</span>
+                                </li>
+                                <li>
+                                    <h3>ADDRESS</h3>
+                                    <span>(01849) 27, Dongil-ro 174-gil, Nowon-gu, Seoul, Republic of Korea</span>
+                                </li>
+                            </ul>
+                            <div id="map" style="width:100%;height:400px;"></div>
+                        </div>
+                    </div> <!-- // us_inner -->
+                </section> <!-- // us -->
+            </main>
+        </div> <!-- // contact_contents -->
+        <footer>
+            <div class="footer_inner">
+                <ul class="contact" id="iftfont">
+                    <li><span>TEL&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>070.7777.9272&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                    <li><span>KAKAO</span>@아이에프피<br><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>http://pf.kakao.com/_HiQxmxj</li>
+                    <li><span></span><img class="qrifp" src="{% static 'img/qrifp.png' %}"></li>
+                </ul>
+            </div>
+        </footer>
+    </div> <!-- // wrap -->
+    
+    <script>
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.6197, 127.0767),
+            zoom: 10
+        };
+
+        var map = new naver.maps.Map('map', mapOptions);
+    </script>
+    <script type="text/javascript" src="js/illi.js"></script>
+    
+</body>
+</html>
