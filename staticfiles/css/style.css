@@ -4,23 +4,23 @@
 /* 1. Inter */
 @font-face {
     font-family: "Inter";
-    src: url("fonts/InterR.woff") format("woff"), url("fonts/InterR.woff2") format("woff2");
+    src: url("fonts/interr.woff") format("woff"), url("fonts/interr.woff2") format("woff2");
     font-weight: normal;
 }
 @font-face {
     font-family: "Inter";
-    src: url("fonts/InterB.woff") format("woff"), url("fonts/InterB.woff2") format("woff2");
+    src: url("fonts/interb.woff") format("woff"), url("fonts/interb.woff2") format("woff2");
     font-weight: bold;
 }
 /* 2. Noto Serif KR */
 @font-face {
     font-family: "NotoSerif";
-    src: url("fonts/NotoserifR.woff") format("woff"), url("fonts/NotoserifR.woff2") format("woff2");
+    src: url("fonts/notoserifr.woff") format("woff"), url("fonts/notoserifr.woff2") format("woff2");
     font-weight: normal;
 }
 @font-face {
     font-family: "NotoSerif";
-    src: url("fonts/NotoserifB.woff") format("woff"), url("fonts/NotoserifB.woff2") format("woff2");
+    src: url("fonts/notoserifb.woff") format("woff"), url("fonts/notoserifb.woff2") format("woff2");
     font-weight: bold;
 }
 
