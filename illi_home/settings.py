@@ -89,17 +89,17 @@ WSGI_APPLICATION = 'illi_home.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'illi',                      # Or path to database file if using sqlite3.
-        'USER': 'postgres',                      # Not used with sqlite3.
-        'PASSWORD': 'illi0606',                  # Not used with sqlite3.
-        'HOST': 'svc.sel5.cloudtype.app',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '30669',
-    }
-}
-'''
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#         'NAME': 'illi',                      # Or path to database file if using sqlite3.
+#         'USER': 'postgres',                      # Not used with sqlite3.
+#         'PASSWORD': 'illi0606',                  # Not used with sqlite3.
+#         'HOST': 'svc.sel5.cloudtype.app',                      # Set to empty string for localhost. Not used with sqlite3.
+#         'PORT': '30669',
+#     }
+# }
+
 
 DATABASES = {
     'default': {
@@ -111,7 +111,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
+
 
 
 # Password validation
